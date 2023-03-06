@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [tmpSuite]">
+  <test thread-count="5" name="tmpTest(failed)">
+    <classes>
+      <class name="com.qa.test.Nop_com_login_001">
+        <methods>
+          <include name="flush"/>
+          <include name="init"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.test.Nop_com_login_001 -->
+    </classes>
+  </test> <!-- tmpTest(failed) -->
+</suite> <!-- Failed suite [tmpSuite] -->
