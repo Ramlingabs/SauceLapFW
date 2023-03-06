@@ -35,6 +35,15 @@ public class Home_Page_obj extends SetUp {
 	@FindBy(xpath = "//button[contains(text(),'Remove')]")
 	WebElement element_remove;
 
+
+	@FindBy(xpath = "//button[contains(text(),'Open Menu')]")
+	WebElement HambergerMenu_Menu1;
+	
+	@FindBy(xpath = "//a[contains(text(),'About')]")
+	WebElement about_click;
+	
+	@FindBy(xpath = "//a//span[contains(text(),'Products')]")
+	WebElement product_click;
 	
 	
 	WebDriver driver;
@@ -46,11 +55,7 @@ public class Home_Page_obj extends SetUp {
 
 	ActionElement action = new ActionElement();
 
-//	public void ele_click() {
 
-	// action.click_Object(element_click, "ele click");
-
-//	}
 
 	public void CheckAllItems() {
 		try {
@@ -93,5 +98,27 @@ public class Home_Page_obj extends SetUp {
 
 		}
 	}
+	public void hambergerclick() {
+		action.click_Object(HambergerMenu_Menu, "click on hamberger");
+	}
+	public void aboutclick() {
+		action.click_Object(about_click, "about_clicked");
+	}
+	public void product_on_mouse_over() {
+	action.mouseoverweb(product_click);
+	}
+	
+	
+	public void gotoSauceAPIquality() {
+		try {
+
+			String FilterVal = Excel.getData(TC_ID, "FilterValue");
+			action.selectByValue(select_ProductFilter, FilterVal);
+			ExtentReporter.logPassWithScreenShot("select_ProductFilter");
+		} catch (Exception e) {
+
+		}
+	}
+	
 
 }
